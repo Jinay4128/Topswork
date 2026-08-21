@@ -1,0 +1,53 @@
+1. Basic Git Commands
+
+Initialize a repository: git init
+
+Stage all files: git add .
+
+Commit with a message: git commit -m "Your commit message"
+
+Push to remote: git push origin main
+
+Pull latest changes: git pull
+
+2. git fetch vs git pull
+
+git fetch downloads the latest commits and branches from the remote repository to your local system without modifying your working files.
+
+git pull fetches the remote changes and immediately merges them automatically into your current active local branch.
+
+3. Repository Creation Request
+As an AI, I do not have a local system filesystem, continuous access, or personal cloud credentials to create live web accounts and host public GitHub URLs. However, you can run these steps locally to create and push your own repository:
+
+Bash
+mkdir my-sample-repo
+cd my-sample-repo
+git init
+echo "Hello World" > sample.txt
+git add sample.txt
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/your-username/my-sample-repo.git
+git push -u origin main
+4. Fork vs Pull Request
+
+A Fork is a complete server-side copy of someone else's GitHub repository created under your own user account.
+
+A Pull Request (PR) is a formal request sent to the original repository's maintainers proposing to merge code changes from your branch/fork into their main codebase.
+
+5. Git Branching Commands
+To create a feature branch, commit a change, and merge it back into main:
+
+Bash
+# 1. Create and switch to the new branch
+git checkout -b feature-test
+
+# 2. Make changes and commit on feature-test
+git add .
+git commit -m "Add changes to feature-test"
+
+# 3. Switch back to the main branch
+git checkout main
+
+# 4. Merge feature-test into main
+git merge feature-test
